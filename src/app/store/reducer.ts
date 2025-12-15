@@ -25,7 +25,7 @@ export const departmentReducer = createReducer(
     })),
     on(loadDeparmentSuccess, (state, {departments}) => ({
         ...state,
-        departments: departments,
+        departments,
         loading: false
     }))
 ) 
