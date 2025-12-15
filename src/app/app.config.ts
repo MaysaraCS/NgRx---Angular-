@@ -10,11 +10,13 @@ import { routes } from './app.routes';
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 import { provideHttpClient } from '@angular/common/http';
+import { departmentReducer } from './store/reducer';
+import { DepartmentEffects } from './store/effect';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), 
     provideRouter(routes), 
     provideHttpClient(),
-    provideStore(), 
-    provideEffects()]
+    provideStore({departments: departmentReducer}), 
+    provideEffects([DepartmentEffects])]
 };
