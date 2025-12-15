@@ -4,10 +4,11 @@ import { Store } from '@ngrx/store';
 import { loadDeparment } from './store/action';
 import { selectDepartments, selectLoading } from './store/selector';
 import { AsyncPipe } from '@angular/common';
+import { AdminComponent } from "./pages/admin/admin.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, AsyncPipe],
+  imports: [RouterOutlet, AsyncPipe, AdminComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

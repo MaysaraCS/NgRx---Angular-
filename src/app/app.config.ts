@@ -2,6 +2,8 @@
 // ng add @ngrx/effects@19
 // in service 
 // ng g s department
+// in pages 
+// ng g c admin
 
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';

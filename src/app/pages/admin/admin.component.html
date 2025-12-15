@@ -1,10 +1,6 @@
-loading => {{ loading$ | async }}
-
+<p>admin page!</p>
 <ul>
   @for (item of deparment$ | async; track $index) {
   <li>{{ item.departmentName }}</li>
   }
 </ul>
-
-<br />
-<app-admin></app-admin>
